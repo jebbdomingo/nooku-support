@@ -21,6 +21,9 @@
         )) ?>
         <div>
             <?
+            /**
+             * @todo can we somehow place this array to a component's configuration so that it can be used in different places? 
+             */
             $statuses = array(
                 'new'     => 'New',
                 'open'    => 'Open',
