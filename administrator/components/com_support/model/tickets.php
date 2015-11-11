@@ -34,7 +34,7 @@ class ComSupportModelTickets extends KModelDatabase
 
         $state = $this->getState();
 
-        if (!is_null($state->status)) {
+        if (!is_null($state->status) && $state->status <> 'all') {
             $query->where('(tbl.status IN :status)')->bind(array('status' => (array) $state->status));
         }
     }

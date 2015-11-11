@@ -32,6 +32,7 @@ defined('KOOWA') or die; ?>
                      * @todo can we somehow place this array to a component's configuration so that it can be used in different places? 
                      */
                     $statuses = array(
+                        'all'     => 'All',
                         'new'     => 'New',
                         'open'    => 'Open',
                         'pending' => 'Pending',
