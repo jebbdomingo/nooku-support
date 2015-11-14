@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0.0" method="upgrade">
+    <identifier>com:support</identifier>
+    <name>com_support</name>
+    <author>Joomlatools</author>
+    <creationDate>November 2015</creationDate>
+    <copyright>Copyright (C) 2011 - 2014 Timble CVBA (http://www.timble.net)</copyright>
+    <license>GNU GPLv3 - http://www.gnu.org/licenses/gpl.html</license>
+    <authorEmail>support@joomlatools.com</authorEmail>
+    <authorUrl>www.joomlatools.com</authorUrl>
+    <version>0.0.1</version>
+    <description>A Support example component</description>
+
+    <scriptfile>resources/install/script.php</scriptfile>
+
+    <files folder="../../../site/components/com_support">
+        <folder>controller</folder>
+        <folder>dispatcher</folder>
+        <folder>resources</folder>
+        <folder>template</folder>
+        <folder>view</folder>
+
+        <filename>support.php</filename>
+    </files>
+
+    <media folder="../../../media">
+        <folder>com_support</folder>
+    </media>
+
+    <administration>
+        <menu>COM_SUPPORT</menu>
+        <submenu>
+            <menu view="tickets" link="option=com_support&amp;view=tickets">COM_SUPPORT_SUBMENU_TICKETS</menu>
+            <menu view="activities" link="option=com_support&amp;view=activities">COM_SUPPORT_SUBMENU_ACTIVITIES</menu>
+        </submenu>
+
+        <files folder="../../../administrator/components/com_support">
+            <folder>controller</folder>
+            <folder>database</folder>
+            <folder>dispatcher</folder>
+            <folder>language</folder>
+            <folder>model</folder>
+            <folder>views</folder>
+            <folder>resources</folder>
+
+            <filename>support.php</filename>
+        </files>
+    </administration>
+
+</extension>

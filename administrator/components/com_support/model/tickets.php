@@ -12,8 +12,6 @@ class ComSupportModelTickets extends KModelDatabase
 {
     public function __construct(KObjectConfig $config)
     {
-        //echo get_class($config);die;
-
         parent::__construct($config);
 
         $this->getState()
