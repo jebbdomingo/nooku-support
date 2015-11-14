@@ -27,37 +27,20 @@ defined('KOOWA') or die; ?>
         <form action="" method="get" class="-koowa-grid">
             <div class="scopebar">
                 <div class="scopebar-group last hidden-tablet hidden-phone">
-                    <?
-                    /**
-                     * @todo can we somehow place this array to a component's configuration so that it can be used in different places? 
-                     */
-                    $statuses = array(
-                        'all'     => 'All',
-                        'new'     => 'New',
-                        'open'    => 'Open',
-                        'pending' => 'Pending',
-                        'solved'  => 'Solved'
-                    );
-                    ?>
-                    <? foreach ($statuses as $key => $label): ?>
-                        <a class="<?= parameters()->status == $key ? 'active' : ''; ?>"
-                            href="<?= route('status='.$key) ?>">
-                            <?= translate($label) ?>
-                        </a>
-                    <? endforeach; ?>
+                    <?php echo helper('status.display', array('active_status' => parameters()->status)); ?>
                 </div>
                 <div class="scopebar-search">
                     <?= helper('grid.search', array('submit_on_clear' => true)) ?>
                 </div>
             </div>
-            <div class="todo_table_container">
+            <div class="support_table_container">
                 <table class="table table-striped footable">
                     <thead>
                         <tr>
                             <th style="text-align: center;" width="1">
                                 <?= helper('grid.checkall')?>
                             </th>
-                            <th class="todo_table__title_field">
+                            <th class="support_table__title_field">
                                 <?= helper('grid.sort', array('column' => 'title', 'title' => 'Title')); ?>
                             </th>
                             <th data-hide="phone,phablet">
@@ -80,7 +63,7 @@ defined('KOOWA') or die; ?>
                                 <td style="text-align: center;">
                                     <?= helper('grid.checkbox', array('entity' => $ticket)) ?>
                                 </td>
-                                <td class="todo_table__title_field">
+                                <td class="support_table__title_field">
                                     <a href="<?= route('view=ticket&id='.$ticket->id); ?>">
                                         <?= escape($ticket->title); ?></a>
                                 </td>
