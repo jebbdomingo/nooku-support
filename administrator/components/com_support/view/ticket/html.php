@@ -28,6 +28,9 @@ class ComSupportViewTicketHtml extends KViewHtml
     {
         parent::__construct($config);
 
+        /**
+         * @todo is this the right place to append the currently logged-in user to the view?
+         */
         $this->_data['user'] = $this->getObject('user');
     }
 }
