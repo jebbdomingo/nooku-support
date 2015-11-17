@@ -21,7 +21,7 @@ class ComSupportControllerActivity extends ComActivitiesControllerActivity
     protected function _initialize(KObjectConfig $config)
     {
         $config->append(array(
-            'toolbars'   => array('menubar', 'activity'),
+            'toolbars' => array('menubar', 'activity'),
         ));
 
         parent::_initialize($config);

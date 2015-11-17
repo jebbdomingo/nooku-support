@@ -12,11 +12,11 @@ return array(
 	'identifiers' => array(
 		'com://admin/support.template.helper.status' => array(
 		    'status' => array(
-		        'all'     => 'All',
-		        'new'     => 'New',
-		        'open'    => 'Open',
-		        'pending' => 'Pending',
-		        'solved'  => 'Solved'
+                'all'     => 'All',
+                'new'     => 'New',
+                'open'    => 'Open',
+                'pending' => 'Pending',
+                'solved'  => 'Solved'
 		    )
 		),
 		'com://admin/support.controller.ticket' => array('behaviors' => array('com:activities.controller.behavior.loggable'))
