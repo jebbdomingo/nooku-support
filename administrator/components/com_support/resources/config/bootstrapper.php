@@ -19,7 +19,12 @@ return array(
                 'solved'  => 'Solved'
 		    )
 		),
-		'com://admin/support.controller.ticket' => array('behaviors' => array('com:activities.controller.behavior.loggable'))
+		'com://admin/support.controller.ticket' => array(
+            'behaviors' => array(
+                'com:activities.controller.behavior.loggable',
+                'com:comments.controller.behavior.commentable'
+            )
+        )
 	),
 
 	'aliases' => array()
