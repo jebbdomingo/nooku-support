@@ -20,7 +20,7 @@
             'value' => $ticket->description
         )) ?>
         <div>
-            <?php echo helper('listbox.status', array('name' => 'status', 'selected' => $ticket->status)) ?>
+            <?php echo helper('status.listbox', array('name' => 'status', 'selected' => $ticket->status)) ?>
         </div>
     </div>
 </form>

@@ -8,22 +8,38 @@
  */
 
 /**
- * Statuses Template Helper
+ * Status Template Helper
  *
   * @package Support
  */
-class ComSupportTemplateHelperStatus extends KTemplateHelperAbstract
+class ComSupportTemplateHelperStatus extends KTemplateHelperListbox
 {
+    /**
+     * Generates status list box
+     * 
+     * @param array $config [optional]
+     * 
+     * @return html
+     */
+    public function listbox(array $config = array())
+    {
+        $config = new KObjectConfig($config);
+        $config->append(array(
+            'options' => $this->getConfig()->status,
+            'filter'  => array()
+        ));
+
+        return parent::optionlist($config);
+    }
+
     /**
      * Generates status filter buttons
      *
-     * @todo rename to display_filters, add display_menu
+     * @param array $config [optional]
      *
-     * @param array $config
-     *
-     * @return  string  Html
+     * @return  string  html
      */
-    public function display(array $config)
+    public function filterButtons(array $config = array())
     {
         $status = $this->getConfig()->status;
 
@@ -32,10 +48,11 @@ class ComSupportTemplateHelperStatus extends KTemplateHelperAbstract
         }
 
         $result = '';
-        
-        foreach ($status as $key => $label) {
-            $class = ($config['active_status'] == $key) ? 'class="active"' : null;
-            $href  = ($config['active_status'] <> $key) ? 'href="' . $this->getTemplate()->route("status={$key}") . '"' : null;
+        foreach ($status as $row) {
+            $value = $row['value'];
+            $label = $row['label'];
+            $class = ($config['active_status'] == $value) ? 'class="active"' : null;
+            $href  = ($config['active_status'] <> $value) ? 'href="' . $this->getTemplate()->route("status={$value}") . '"' : null;
             $label = $this->getObject('translator')->translate($label);
 
             $result .= "<a {$class} {$href}>{$label}</a>";

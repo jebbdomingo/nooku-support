@@ -13,12 +13,12 @@ return array(
 	'identifiers' => array(
 		'com://admin/support.template.helper.status' => array(
 		    'status' => array(
-                'all'     => 'All',
-                'new'     => 'New',
-                'open'    => 'Open',
-                'pending' => 'Pending',
-                'solved'  => 'Solved'
-		    )
+                array('label' => 'All', 'value' => 'all'),
+                array('label' => 'New', 'value' => 'new'),
+                array('label' => 'Open', 'value' => 'open'),
+                array('label' => 'Pending', 'value' => 'pending'),
+                array('label' => 'Solved', 'value' => 'Solved')
+            )
 		),
 		'com://admin/support.controller.ticket' => array(
             'behaviors' => array(
