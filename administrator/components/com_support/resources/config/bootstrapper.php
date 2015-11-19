@@ -21,8 +21,7 @@ return array(
 		),
 		'com://admin/support.controller.ticket' => array(
             'behaviors' => array(
-                'com:activities.controller.behavior.loggable',
-                'com:comments.controller.behavior.commentable'
+                'com:activities.controller.behavior.loggable'
             )
         )
 	),

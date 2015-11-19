@@ -70,7 +70,7 @@
 
     <div>
         <?php
-        echo @import('com:comments.comment.default.html', array(
+        echo @import('default_comment.html', array(
             'state' => (object) array(
                 'table' => $ticket->getTable()->getName(),
                 'row'   => $ticket->id
