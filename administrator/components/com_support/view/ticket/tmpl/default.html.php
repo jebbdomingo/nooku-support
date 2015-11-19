@@ -20,23 +20,7 @@
             'value' => $ticket->description
         )) ?>
         <div>
-            <?
-            /**
-             * @todo can we somehow place this array to a component's configuration so that it can be used in different places? 
-             */
-            $statuses = array(
-                'all'     => 'All',
-                'new'     => 'New',
-                'open'    => 'Open',
-                'pending' => 'Pending',
-                'solved'  => 'Solved'
-            );
-            ?>
-            <select name="status">
-                <? foreach ($statuses as $key => $label): ?>
-                    <option value="<?= $key ?>" <?= ($ticket->status == $key ? 'selected="selected"' : '') ?>><?= $label ?></option>
-                <? endforeach; ?>
-            </select>
+            <?php echo helper('listbox.status', array('name' => 'status', 'selected' => $ticket->status)) ?>
         </div>
     </div>
 </form>

@@ -8,6 +8,7 @@
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        https://github.com/nooku/nooku-support for the canonical source repository
  */
+
 return array(
 	'identifiers' => array(
 		'com://admin/support.template.helper.status' => array(
