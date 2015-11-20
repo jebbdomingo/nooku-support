@@ -26,31 +26,10 @@
 </form>
 
 <div class="comments">
-    <? foreach($ticket->getComments() as $comment) : ?>
-    <div class="comment comment_<?= $comment->id ?>">
-        <strong><?php echo $comment->created_by == $user->getId() ? translate('You') : $comment->created_by_name ?></strong>
-        <span class="muted">
-            <?= helper('date.format', array('date'=> $comment->created_on, 'format' => 'd F Y H:i')) ?>
-        </span>
-        <div class="comment_text">
-            <?= $comment->text ?>
-        </div>
-        <? if($comment->isAttachable()) : ?>
-            <?= import('default_attachments.html', array('attachments' => $comment->getAttachments())) ?>
-        <? endif ?>
-    </div>
-    <? endforeach; ?>
+    <h2>Comments</h2>
+    <?php echo @import('com:comments.comments.list.html', array('comments' => $ticket->getComments())); ?>
 
-    <div class="comment">
-        <strong><?php echo $ticket->created_by == $user->getId() ? translate('You') : $ticket->created_by_name ?></strong>
-        <span class="muted">
-            <?= helper('date.format', array('date'=> $ticket->created_on, 'format' => 'd F Y H:i')) ?>
-        </span>
-        <?= $ticket->text ?>
-        <? if($ticket->isAttachable()) : ?>
-            <?= import('default_attachments.html', array('attachments' => $ticket->getAttachments())) ?>
-        <? endif ?>
-    </div>
+    <br />
 
     <div>
         <?php
