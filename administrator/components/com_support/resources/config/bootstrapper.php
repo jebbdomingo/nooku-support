@@ -17,7 +17,7 @@ return array(
                 array('label' => 'New', 'value' => 'new'),
                 array('label' => 'Open', 'value' => 'open'),
                 array('label' => 'Pending', 'value' => 'pending'),
-                array('label' => 'Solved', 'value' => 'Solved')
+                array('label' => 'Solved', 'value' => 'solved')
             )
 		),
 		'com://admin/support.controller.ticket' => array(
