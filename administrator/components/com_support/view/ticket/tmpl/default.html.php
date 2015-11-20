@@ -25,19 +25,21 @@
     </div>
 </form>
 
-<div class="comments">
-    <h2>Comments</h2>
-    <?php echo @import('com:comments.comments.list.html', array('comments' => $ticket->getComments())); ?>
+<?php if (parameters()->id): ?>
+    <div class="comments">
+        <h2>Comments</h2>
+        <?php echo @import('com:comments.comments.list.html', array('comments' => $ticket->getComments())); ?>
 
-    <br />
+        <br />
 
-    <div>
-        <?php
-        echo @import('default_comment.html', array(
-            'state' => (object) array(
-                'table' => $ticket->getTable()->getName(),
-                'row'   => $ticket->id
-            )))
-        ?>
+        <div>
+            <?php
+            echo @import('default_comment.html', array(
+                'state' => (object) array(
+                    'table' => $ticket->getTable()->getName(),
+                    'row'   => $ticket->id
+                )))
+            ?>
+        </div>
     </div>
-</div>
+<?php endif; ?>
