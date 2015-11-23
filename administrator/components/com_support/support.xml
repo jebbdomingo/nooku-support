@@ -23,19 +23,18 @@
         </sql>
     </uninstall>
 
+    <media folder="../../../media">
+        <folder>com_support</folder>
+    </media>
+
     <files folder="../../../site/components/com_support">
         <folder>controller</folder>
         <folder>dispatcher</folder>
         <folder>resources</folder>
         <folder>template</folder>
         <folder>view</folder>
-
         <filename>support.php</filename>
     </files>
-
-    <media folder="../../../media">
-        <folder>com_support</folder>
-    </media>
 
     <administration>
         <menu>COM_SUPPORT</menu>
@@ -53,9 +52,7 @@
             <folder>resources</folder>
             <folder>template</folder>
             <folder>view</folder>
-
             <filename>support.php</filename>
         </files>
     </administration>
-
 </extension>
