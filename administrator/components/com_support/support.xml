@@ -52,7 +52,7 @@
             <folder>model</folder>
             <folder>resources</folder>
             <folder>template</folder>
-            <folder>views</folder>
+            <folder>view</folder>
 
             <filename>support.php</filename>
         </files>

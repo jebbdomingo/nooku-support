@@ -1,10 +1,10 @@
 {
-  "name": "jebbdomingo/nooku-support",
+  "name": "nooku/nooku-support",
   "type": "joomla-installer",
   "license": "GPLv3",
   "description": "Support extension for the Joomlatools Platform",
   "keywords": ["joomla", "extension", "platform"],
-  "homepage": "https://github.com/jebbdomingo/nooku-support",
+  "homepage": "https://github.com/nooku/nooku-support",
   "authors": [
     {
       "name": "Johan Janssens",
@@ -20,7 +20,9 @@
   "require": {
     "php": ">=5.5.0",
     "joomlatools/installer": "*",
-    "joomlatools/joomla-platform-legacy": "^1.0.0"
+    "joomlatools/joomla-platform-legacy": "^1.0.0",
+    "nooku/nooku-comments": "2.*",
+    "nooku/nooku-activities": "2.*"
   },
   "autoload": {
     "files": ["autoload.php"]
