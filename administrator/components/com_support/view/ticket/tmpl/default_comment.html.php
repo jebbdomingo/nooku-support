@@ -5,6 +5,8 @@
  * @copyright   Copyright (C) 2011 - 2015 Johan Janssens and Timble CVBA. (http://www.timble.net)
  * @license     GNU GPLv3 <http://www.gnu.org/licenses/gpl.html>
  * @link        http://github.com/nooku/nooku-comments for the canonical source repository
+ *
+ * @todo make the comments list and form to use Ajax
  */
 ?>
 
