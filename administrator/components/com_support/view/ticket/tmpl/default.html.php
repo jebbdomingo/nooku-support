@@ -1,4 +1,4 @@
-<?= helper('behavior.koowa'); ?>
+<?php echo helper('behavior.koowa'); ?>
 
 <ktml:style src="media://koowa/com_koowa/css/koowa.css" />
 <ktml:module position="toolbar">
@@ -10,20 +10,21 @@
         <div>
             <input type="text" name="title" id="title" size="40" maxlength="255" value="<?= $ticket->title; ?>" placeholder="<?= translate( 'Title' ); ?>" />
         </div>
-        <?= helper('editor.display', array(
-            'name' => 'description',
-            'id' => 'description',
-            'width' => '100%',
-            'height' => '300',
-            'cols' => '60',
-            'rows' => '20',
-            'value' => $ticket->description
+
+        <?php echo helper('editor.display', array(
+            'editor' => 'com:ckeditor.controller.editor',
+            'name'   => 'description',
+            'text'   => $ticket->description
         )) ?>
+
+        <br />
+
         <div>
             <?php echo helper('status.listbox', array('name' => 'status', 'selected' => $ticket->status)) ?>
         </div>
     </div>
 </form>
+
 
 <?php if (parameters()->id): ?>
     <div class="comments">

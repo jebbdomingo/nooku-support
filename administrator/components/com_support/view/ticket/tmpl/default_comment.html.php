@@ -10,17 +10,15 @@
  */
 ?>
 
-<ktml:script src="media://com_comments/js/trix.js" />
-
-<ktml:style src="media://com_comments/css/trix.css" />
-
 <div id="comments-comment-form">
     <form action="<?php echo route('option=com_support&view=comment&row=' . $state->row . '&table=' . $state->table); ?>" method="post">
         <input type="hidden" name="row" value="<?php echo $state->row; ?>" />
         <input type="hidden" name="table" value="<?php echo $state->table; ?>" />
 
-        <input id="x" type="hidden" name="text">
-        <trix-editor input="x" placeholder="<?php echo translate('Add new comment here ...') ?>"></trix-editor>
+        <?php echo helper('editor.display', array(
+            'editor' => 'com:ckeditor.controller.editor',
+            'name'   => 'text'
+        )) ?>
 
         <br />
         
